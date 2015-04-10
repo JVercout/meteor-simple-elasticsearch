@@ -1,0 +1,43 @@
+
+<template name="search">
+	<div class="container-fluid">
+
+    <div class="col-sm-4">
+    <h1> find assets </h1>
+    {{> quickForm id="searchForm" schema="Schema.SearchForm" type="method" meteormethod="searchAssets" doc=searchContext template="bootstrap3-horizontal" label-class="col-sm-3" input-col-class="col-sm-9" resetOnSuccess=false }}
+</div>
+<div class="col-sm-8">
+    <h2>results</h2>
+    <div class="searchresults">
+    <p>total: {{ searchResult.metadata.total }}</p>
+
+    {{ #each searchResult.data }}
+      <article class="ticket row">
+        <div class="col-sm-9">
+          <h2>{{title}}</h2>
+          <p>{{description}}</p>
+        </div>
+        <div class="col-sm-3">
+          <ul>
+            <li> advanced: {{advanced}}</li>
+            <li><b>{{ getName collection="category" id=category }}</b></li>
+            <li>{{ transactionType }}</li>
+            <li> 
+              {{ #each markets }}
+                {{ getName collection="market" id=this }} ;
+              {{ /each }}
+            </li>
+            <li>{{price}} {{currency}}</li>
+            <li>Owner: {{company.name}}</li>
+            <li>{{modifiedAt}}</li>
+          </ul>
+        </div>
+
+      </article>
+    {{ /each }}
+
+    </div>
+	</div>
+</div>
+</template>
+
