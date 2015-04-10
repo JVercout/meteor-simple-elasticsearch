@@ -1,31 +1,34 @@
 # mSearch
 
-@todo
+This is a simple example about how elasticsearch can work with Meteor.js. This is a development repository. 
 
-## Installation
 
-## Changelogs
+** Requirement **
 
-## QuickStart
-### Simple
+* Install Meteor
 ```
-$ chmod +x meteorBase.sh
-$ ./meteorBase.sh myapp
-$ cd myapp
-$ meteor
+curl https://install.meteor.com/ | sh
 ```
 
-### Advanced
+* Install elasticsearch on your development machine:
 
-Environment : development / staging / production
+Version tested: 1.4.2, 1.5.0
 
-1. Configure config/developement.sh with your custom vars
-2. Configure config/settings.development.json with your custom vars
-3. and use ...
+On Mac OS X: 
+brew install elasticsearch
+
+
+
+
+
+** Run **
+
+Be sure elaticsearch is running on port 9200.
+
 ```
-$ source config/developement.sh
-$ meteor --settings=config/settings.development.json
+git clone https://github.com/JVercout/meteor-es-simple-example
+cd ./meteor-es-simple-example 
+meteor
 ```
 
-## Contact
-
+This will boot the app, fill the mongo database and elasticsearch index with fixture content. 
