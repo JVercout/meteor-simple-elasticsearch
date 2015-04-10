@@ -12,8 +12,7 @@ curl https://install.meteor.com/ | sh
 
 ###Install elasticsearch on your development machine:
 Elasticsearch version tested: 1.4.2, 1.5.0.
-* On Mac OS X: 
-brew install elasticsearch
+* On Mac OS X: `brew install elasticsearch`
 
 
 ## Run
