@@ -1,7 +1,6 @@
-# mSearch
+# Meteor Simple Elasticsearch Implémentation
 
 This is a simple example about how elasticsearch can work with Meteor.js. This is a development repository. 
-
 
 ## Requirements
 
