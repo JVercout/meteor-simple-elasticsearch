@@ -1,4 +1,4 @@
-# Meteor Simple Elasticsearch Implémentation
+# Meteor Simple Elasticsearch Implementation
 
 This is a simple example about how elasticsearch can work with Meteor.js. This is a development repository. 
 
